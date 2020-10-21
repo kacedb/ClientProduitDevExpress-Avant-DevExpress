@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BibliothequeAccesDonneesClient\BibliothequeAccesDonneesClient.csproj" />
     <ProjectReference Include="..\BibliothequeModels\BibliothequeModels.csproj" />
+    <ProjectReference Include="..\BibliothequeUtilites\BibliothequeUtilites.csproj" />
   </ItemGroup>
 
 </Project>
