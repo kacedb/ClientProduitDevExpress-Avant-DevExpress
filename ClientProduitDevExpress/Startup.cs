@@ -34,7 +34,7 @@ namespace ClientProduitDevExpress
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             //services.AddControllersWithViews();
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();//Ajouté: tien en compte les modification en temps reel
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();//Tenir en compte les modification en temps reel
             
             services.AddRazorPages();
         }
