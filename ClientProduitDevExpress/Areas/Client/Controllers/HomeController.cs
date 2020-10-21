@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 //using ClientProduitDevExpress.Models;
 
-namespace ClientProduitDevExpress.Controllers
+namespace ClientProduitDevExpress.Areas.Client.Controllers
 {
+    [Area("Client")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
