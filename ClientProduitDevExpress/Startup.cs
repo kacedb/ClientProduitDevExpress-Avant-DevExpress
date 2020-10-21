@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ClientProduitDevExpress.BibliothequeAccesDonneesClient.Data;
+using BibliothequeAccesDonneesClient.Data;
 
 namespace ClientProduitDevExpress
 {
@@ -66,6 +66,7 @@ namespace ClientProduitDevExpress
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    //pattern: "{controller=Home}/{action=Index}/{id?}");//Modification Ajout de consid.ration de Zone(Client par défaut)
                     pattern: "{area=Client}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
