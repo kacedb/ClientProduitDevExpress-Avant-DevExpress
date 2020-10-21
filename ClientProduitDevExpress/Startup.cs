@@ -33,8 +33,9 @@ namespace ClientProduitDevExpress
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            //services.AddControllersWithViews();
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();//Ajouté: tien en compte les modification en temps reel
+            services.AddControllersWithViews();
+            //services.AddControllersWithViews().AddRazorRuntimeCompilation();//Ajouté: tien en compte les modification en temps reel
+            
             services.AddRazorPages();
         }
 
