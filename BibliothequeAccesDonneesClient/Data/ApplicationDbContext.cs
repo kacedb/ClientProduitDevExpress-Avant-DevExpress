@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace  ClientProduitDevExpress.BibliothequeModels.Data
+namespace  ClientProduitDevExpress.BibliothequeAccesDonneesClient.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
