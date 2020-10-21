@@ -1,6 +1,6 @@
 using System;
 
-namespace ClientProduitDevExpress.Models
+namespace ClientProduitDevExpress.BibliothequeModels.ViewModels
 {
     public class ErrorViewModel
     {
