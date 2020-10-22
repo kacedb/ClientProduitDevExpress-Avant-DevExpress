@@ -1,9 +1,78 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
     <h1 class="display-4">Azul  Bouzid</h1>
     <p>Entrainement pour le poste obtenu: Programmeur Technicien au Centre de Services Scolaire des Draveurs (CSSD).</p>
     <h3>DevExpress</h3>
 </div>
+<h1>Ajouter Dev Extreme à un projet existant <a href="https://docs.devexpress.com/AspNetCore/401026/devextreme-based-controls/get-started/configure-a-visual-studio-project?v=19.1">Click sur le lien</a></h1>
+
+<h2>Ajouter des ressources Dev Extreme</h2>
+<ol>
+    <li>Ouvrez votre projet dans Visual Studio (voir les versions prises en charge ).</li>
+    <li>Cliquez avec le bouton droit sur le projet dans la fenêtre<mark>Explorateur de solutions</mark> et sélectionnez la commande <mark>Ajouter DevExtreme au projet</mark> dans le menu.</li>
+    <li>Dans la boîte de dialogue appelée, cliquez sur OK .</li>
+</ol>
+
+<h3>Il faut quelques secondes à Visual Studio pour effectuer les opérations suivantes:</h3>
+<ul>
+
+    <li>Des packages côté serveur sont ajoutés aux références: DevExtreme.AspNet.Core , DevExtreme.AspNet.Data .</li>
+    <li>Les fichiers de projet suivants sont modifiés: Startup.cs , _ViewImports.cshtml , NuGet.config ..</li>
+    <li>Le fichier _DevExtremeLayout.cshtml est créé (voir ci - dessous pour savoir comment l'utiliser).</li>
+
+</ul>
+
+
+<h3>Utilisez le fichier de mise en page Dev Extreme</h3>
+Le fichier de disposition DevExtreme ( _DevExtremeLayout.cshtml ) est ajouté au projet lorsque vous cliquez sur la commande Ajouter DevExtreme à la commande de menu Projet . Ce fichier contient des liens vers toutes les ressources côté client.
+
+Pour utiliser cette mise en page, accédez au fichier _ViewStart.cshtml (situé dans le dossier Pages ou View/Shared ) et passez _Layoutà _DevExtremeLayout.
+
+<h3>Lier les ressources dans le projet</h3>
+<ol>
+    <li><mark>Ajoutez les liens CSS et script suivants à la  &lt;head&gt;   section: </mark></li>
+
+    &lt;head&gt;
+    <br\>
+        ... </br>
+        @@* Uncomment to use the HtmlEditor control *@@  </br>
+        @@* &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.min.js"&gt;&lt;/script&gt;  *@@ </br></br>
+
+        @@* Uncomment to use the Diagram control *@@ </br>
+        @@* &lt;link href="~/css/devextreme/dx-diagram.css" rel="stylesheet" />*@@ </br></br>
+
+        &lt;link href="~/css/devextreme/dx.common.css" rel="stylesheet" /&gt; </br>
+        &lt;link href="~/css/devextreme/dx.light.css" rel="stylesheet" /&gt; </br></br>
+
+        @@* Uncomment to use the Diagram control *@@ </br>
+        @@* &lt;script src="~/js/devextreme/dx-diagram.js"&gt;&lt;/script&gt; *@@ </br></br>
+
+        &lt;script src="~/js/devextreme/jquery.js"&gt;&lt;/script&gt; </br></br>
+
+        &lt;script src="~/js/devextreme/cldr.js"&gt; &lt;/script&gt; </br>
+        &lt;script src="~/js/devextreme/cldr/event.js"&gt; &lt;/script&gt;  </br>
+        &lt;script src="~/js/devextreme/cldr/supplemental.js"&gt; &lt;/script&gt; </br>
+        &lt;script src="~/js/devextreme/cldr/unresolved.js"&gt; &lt;/script&gt; </br></br>
+
+        &lt;script src="~/js/devextreme/globalize.js"&gt; &lt;/script&gt; </br>
+        &lt;script src="~/js/devextreme/globalize/message.js"&gt; &lt;/script&gt; </br>
+        &lt;script src="~/js/devextreme/globalize/number.js"&gt; &lt;/script&gt; </br>
+        &lt;script src="~/js/devextreme/globalize/currency.js"&gt; &lt;/script&gt; </br>
+        &lt;script src="~/js/devextreme/globalize/date.js"&gt; &lt;/script&gt; </br></br>
+
+        @@* Uncomment to enable client-side export *@@ </br>
+        @@* &lt;script src="~/js/devextreme/jszip.js"&gt;&lt;/script&gt; *@@</br></br>
+
+        &lt;script src="~/js/devextreme/dx.all.js"&gt; &lt;/script&gt;</br>
+
+        @@* Uncomment to provide geo-data for the VectorMap control *@@ </br></br>
+        @@* &lt;script src="~/js/devextreme/vectormap-data/world.js"&gt;&lt;/script&gt; *@@
+
+        &lt;script src="~/js/devextreme/aspnet/dx.aspnet.mvc.js"&gt; &lt;/script&gt;</br>
+        &lt;script src="~/js/devextreme/aspnet/dx.aspnet.data.js"&gt; &lt;/script&gt;</br>
+        &lt;/head&gt;
+
+        <li><mark>Si le fichier de mise en page contient des liens jQuery qui ont été ajoutés précédemment (ils peuvent être placés dans les  &lt;environment&gt;conteneurs), supprimez-les.</mark></li>
+
+</ol>
